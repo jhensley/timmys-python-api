@@ -21,5 +21,5 @@ import reverse.views as reverse
 urlpatterns = [
      url(r'^coins$', coins.api, name='coins'),
      url(r'^people$', people.api, name='people'),
-     url(r'^reverse$', coins.api, name='people'),
+     url(r'^reverse$', reverse.api, name='people'),
 ]
