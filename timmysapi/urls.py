@@ -16,6 +16,4 @@ Including another URLconf
 from django.conf.urls import url
 from .views import people
 
-urlpatterns = [
-    url(r'^people$', people, name='people'),
-]
+urlpatterns = []

@@ -1,11 +1,6 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-treatments = {
-    "doctor": "flu shot",
-    "vet": "shots and a chew toy"
-}
-
 @csrf_exempt
 def people(request):
     r = json.loads(request.body)
