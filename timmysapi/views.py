@@ -10,21 +10,6 @@ treatments = {
 @csrf_exempt
 def people(request):
     r = json.loads(request.body)
-    response = {
-        "greeting": "Hi " + r["name"] + "!",
-        "patients": _mapPatientsToTreatment(r["patients"], r["job"])
-    }
+    response = {}
 
     return JsonResponse(status=200, data=response)
-
-def _mapPatientsToTreatment(patients, job):
-    treatment = treatments[job.lower()]
-    treatmentToPatients = []
-
-    for patient in patients:
-        treatmentToPatients.append({
-            "patient": patient,
-            "treatment": treatment
-        })
-
-    return treatmentToPatients
