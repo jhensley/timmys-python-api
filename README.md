@@ -15,7 +15,7 @@ Timmy's counting on you. You can't let him down!
 The basis of Timmy's API is a fairly standard Django API. You get started in the standard way:
 
 ```
-pip install -r requirements.text
+pip install -r requirements.txt
 python manage.py runserver
 python manage.py test
 ```
