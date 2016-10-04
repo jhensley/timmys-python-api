@@ -1,8 +1,9 @@
+# Create your views here.
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
-def people(request):
+def api(request):
     r = json.loads(request.body)
     response = {}
 

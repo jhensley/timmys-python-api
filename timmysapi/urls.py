@@ -14,6 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from .views import people
+import coins.views as coins
+import people.views as people
+import reverse.views as reverse
 
-urlpatterns = []
+urlpatterns = [
+     url(r'^coins$', coins.api, name='coins'),
+     url(r'^people$', coins.api, name='people'),
+     url(r'^reverse$', coins.api, name='people'),
+]
